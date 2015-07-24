@@ -73,7 +73,6 @@ public OnPluginStart()
     CreateCommands();
     HookCommands();
     FindOffsets();
-    SetupGameData();
     InitTeamControl();
     InitWeaponRestrict();
     
@@ -197,7 +196,7 @@ public OnClientDisconnect(client)
     
     if (count <= 1 && tHUD != INVALID_HANDLE)
     {
-        TerminateRound(5.0, Terrorists_Win);
+        TerminateRound(5.0, CSRoundEnd_TerroristWin);
     }
 }
 
@@ -226,7 +225,7 @@ CheckMapConfig()
 
 ZRiotEnd()
 {
-    TerminateRound(3.0, Game_Commencing);
+    TerminateRound(3.0, CSRoundEnd_GameStart);
     
     SetHostname(hostname);
     

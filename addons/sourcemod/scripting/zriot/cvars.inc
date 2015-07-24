@@ -123,7 +123,7 @@ public EnableHook(Handle:convar, const String:oldValue[], const String:newValue[
         
         gDay = 0;
         
-        TerminateRound(3.0, Game_Commencing);
+        TerminateRound(3.0, CSRoundEnd_GameStart);
     }
     else
     {

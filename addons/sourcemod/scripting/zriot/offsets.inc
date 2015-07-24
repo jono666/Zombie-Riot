@@ -16,8 +16,7 @@ new offsBuyZone;
 new offsFadeMin;
 new offsFadeMax;
 
-new Handle:hGameConf = INVALID_HANDLE;
-new Handle:hTerminateRound = INVALID_HANDLE;
+
 
 FindOffsets()
 {
@@ -74,17 +73,6 @@ FindOffsets()
     {
         SetFailState("Couldn't find \"m_fadeMaxDist\"!");
     }
-}
-
-SetupGameData()
-{
-    hGameConf = LoadGameConfigFile("plugin.zombieriot");
-    
-    StartPrepSDKCall(SDKCall_GameRules);
-    PrepSDKCall_SetFromConf(hGameConf, SDKConf_Signature, "TerminateRound");
-    PrepSDKCall_AddParameter(SDKType_Float, SDKPass_Plain);
-    PrepSDKCall_AddParameter(SDKType_PlainOldData, SDKPass_Plain);
-    hTerminateRound = EndPrepSDKCall();
 }
 
 SetPlayerVelocity(client, const Float:vec[3])
@@ -185,10 +173,10 @@ stock Util_RemovePlayerItem(client, weaponindex)
     RemoveEdict(weaponindex);
 }
 
-TerminateRound(Float:delay, reason)
+TerminateRound(Float:delay, CSRoundEndReason:reason)
 {
     if (tHUD == INVALID_HANDLE)
         return;
     
-    SDKCall(hTerminateRound, delay, reason);
+    CS_TerminateRound(delay, reason, false);
 }
