@@ -404,7 +404,7 @@ InitClientDeathCount(client)
         return;
     
     decl String:steamid[64];
-    GetClientAuthString(client, steamid, sizeof(steamid));
+    GetClientAuthId(client, AuthId_Steam2, steamid, sizeof(steamid));
     
     StrCat(steamid, sizeof(steamid), "_iDeaths");
     
@@ -417,7 +417,7 @@ ChangeClientDeathCount(client, value)
         return;
     
     decl String:steamid[64];
-    GetClientAuthString(client, steamid, sizeof(steamid));
+    GetClientAuthId(client, AuthId_Steam2, steamid, sizeof(steamid));
     
     StrCat(steamid, sizeof(steamid), "_iDeaths");
     
@@ -431,7 +431,7 @@ GetClientDeathCount(client)
         return 0;
     
     decl String:steamid[64];
-    GetClientAuthString(client, steamid, sizeof(steamid));
+    GetClientAuthId(client, AuthId_Steam2, steamid, sizeof(steamid));
     
     StrCat(steamid, sizeof(steamid), "_iDeaths");
     
