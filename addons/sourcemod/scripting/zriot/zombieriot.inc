@@ -6,22 +6,6 @@
  * ==================== 
  */
 
-#define Target_Bombed							0		// Target Successfully Bombed!
-#define VIP_Escaped								1		// The VIP has escaped!
-#define VIP_Assassinated						2		// VIP has been assassinated!
-#define Terrorists_Escaped						3		// The terrorists have escaped!
-#define CTs_PreventEscape						4		// The CT's have prevented most of the terrorists from escaping!
-#define Escaping_Terrorists_Neutralized			5		// Escaping terrorists have all been neutralized!
-#define Bomb_Defused							6		// The bomb has been defused!
-#define CTs_Win									7		// Counter-Terrorists Win!
-#define Terrorists_Win							8		// Terrorists Win!
-#define Round_Draw								9		// Round Draw!
-#define All_Hostages_Rescued					10		// All Hostages have been rescued!
-#define Target_Saved							11		// Target has been saved!
-#define Hostages_Not_Rescued					12		// Hostages have not been rescued!
-#define Terrorists_Not_Escaped					13		// Terrorists have not escaped!
-#define VIP_Not_Escaped							14		// VIP has not escaped!
-#define Game_Commencing							15		// Game Commencing!
 
 #define DXLEVEL_MIN 90
 
