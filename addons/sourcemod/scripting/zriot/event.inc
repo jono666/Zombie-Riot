@@ -182,9 +182,9 @@ public Action:RoundEnd(Handle:event, const String:name[], bool:dontBroadcast)
     
     CreateTimer(0.0, AssignTeamTimer);
     
-    new reason = GetEventInt(event, "reason");
+    new CSRoundEndReason:reason = CSRoundEndReason:GetEventInt(event, "reason");
     
-    if (reason == CTs_Win || reason == Terrorists_Win)
+    if (reason == CSRoundEnd_CTWin || reason == CSRoundEnd_TerroristWin)
     {
         new winner = GetEventInt(event, "winner");
         
