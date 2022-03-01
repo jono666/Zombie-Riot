@@ -100,7 +100,7 @@
 	"Weapon invalid"
 	{
 		"#format"	"{1:s}"
-		"ru"		"Оружие @green\"{1}\" @defaultнедействительно или в настоящее время запрещено."
+		"ru"		"Оружие @green\"{1}\" @defaultнедействительно или запрещено."
 	}
 
 	"Zombie cant use weapon"
